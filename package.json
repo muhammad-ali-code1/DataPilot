@@ -1,0 +1,44 @@
+{
+  "name": "react-example",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
+    "start": "node dist/server.cjs",
+    "clean": "rm -rf dist server.js",
+    "test": "tsx src/tests/schemaResolver.test.ts && tsx src/tests/analyticalEngine.test.ts && tsx src/tests/universalPipeline.test.ts && tsx src/tests/productionIntegration.test.ts && tsx src/tests/chatGrounding.test.ts && tsx src/tests/cleaningEngine.test.ts && tsx src/tests/cleaningE2EValidation.test.ts && tsx src/tests/employeeDataset.test.ts && tsx src/tests/businessOwnerValidation.test.ts && tsx src/tests/forecastingRegression.test.ts && tsx src/tests/quantityKpiRegression.test.ts && tsx src/tests/unavailableMetric.test.ts && tsx src/tests/genericRouting.test.ts && tsx src/tests/verifyExport.test.ts && tsx src/tests/xlsxRoundTrip.test.ts && tsx src/tests/dateRangeFilter.test.ts && tsx src/tests/chatIntentLayer.test.ts && tsx src/tests/jsonAndFileTypeSupport.test.ts && tsx src/tests/themeAndPricing.test.ts && tsx src/tests/paddleSecurity.test.ts && tsx src/tests/dataEditor.test.ts && tsx src/tests/aiIntelligenceUnified.test.ts && tsx src/tests/dataEditorComprehensive.test.ts && tsx src/tests/criticalWorkflowE2E.test.ts && tsx src/tests/datasetPersistence.test.ts && tsx src/tests/aiAgentActionSync.test.ts",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@supabase/supabase-js": "^2.112.3",
+    "@tailwindcss/vite": "^4.1.14",
+    "@types/papaparse": "^5.5.2",
+    "@vitejs/plugin-react": "^5.0.4",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "papaparse": "^5.5.4",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "react-router-dom": "^7.18.2",
+    "recharts": "^3.10.1",
+    "vite": "^6.2.3",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.0",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.3"
+  }
+}
